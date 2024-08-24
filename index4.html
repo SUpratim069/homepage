@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBS - Business School</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+
+
+
+
+<style>
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background: #f4f4f4;
+}
+
+/* Header Animation */
+.header-animation {
+    animation: headerSlideIn 1.5s ease-out;
+    position: relative;
+}
+
+@keyframes headerSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Section Animation */
+.hero-animation {
+    background-size: cover;
+    background-position: center;
+    animation: heroZoomIn 2s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes heroZoomIn {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero-title {
+    animation: titleFadeIn 2s ease-out;
+}
+
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-description {
+    animation: descriptionFadeIn 2s 0.5s ease-out;
+}
+
+@keyframes descriptionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Animation */
+.btn-animation {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-animation:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+.btn-animation::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: transform 0.6s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+}
+
+.btn-animation:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Navigation Link Animation */
+.nav-link-animation {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease, transform 0.3s ease;
+}
+
+.nav-link-animation::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #f0a500;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    transform-origin: bottom right;
+}
+
+.nav-link-animation:hover {
+    color: #f0a500;
+    transform: scale(1.1);
+}
+
+.nav-link-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Card Animation */
+.card-animation {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.card-animation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    transform: rotateX(0deg);
+    backface-visibility: hidden;
+}
+
+.card-animation:hover::before {
+    opacity: 1;
+    transform: rotateX(180deg);
+}
+
+.card-animation:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Programs Section Animation */
+.programs-animation {
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Animation */
+.footer-animation {
+    animation: footerFadeIn 1.5s ease-out;
+}
+
+@keyframes footerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Parallax Effect for Hero */
+.hero-animation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+}
+
+/* Enhanced Text Shadows */
+.hero-title {
+    text-shadow: 2px
+
+</style>
+
+</head>
+<body>
+    <header class="bg-dark text-white py-3 header-animation">
+        <nav class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="logo">
+                <img src="logo1.png" alt="EBS Logo" class="logo-img">
+            </a>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-white nav-link-animation" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white nav-link-animation" href="#">Programs</a></li>
+                <li class="nav-item"><a class="nav-link text-white nav-link-animation" href="#">About Us</a></li>
+                <li class="nav-item"><a class="nav-link text-white nav-link-animation" href="#">Admissions</a></li>
+                <li class="nav-item"><a class="nav-link text-white nav-link-animation" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero text-center text-white d-flex align-items-center hero-animation" style="background-image: url('bg.jpg'); height: 60vh;">
+        <div class="container">
+            <h1 class="display-4 fw-bold hero-title">Global MBA Programs for Professionals</h1>
+            <p class="lead hero-description">Advance your career with our flexible online programs.</p>
+            <a href="#" class="btn btn-warning btn-lg mt-3 btn-animation">Learn More</a>
+        </div>
+    </section>
+
+    <section class="programs py-5 programs-animation">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Programs</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 card-animation">
+                        <img src="first.jpg" class="card-img-top" alt="Business Administration">
+                        <div class="card-body">
+                            <h5 class="card-title">MBA in Business Administration</h5>
+                            <p class="card-text">Designed for aspiring business leaders.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 card-animation">
+                        <img src="second.jpg" class="card-img-top" alt="Healthcare Management">
+                        <div class="card-body">
+                            <h5 class="card-title">MBA in Healthcare Management</h5>
+                            <p class="card-text">Focused on leadership in the healthcare sector.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 card-animation">
+                        <img src="third.jpg" class="card-img-top" alt="Finance">
+                        <div class="card-body">
+                            <h5 class="card-title">MBA in Finance</h5>
+                            <p class="card-text">Master the financial aspects of your organization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 footer-animation">
+        <div class="container text-center">
+            <p>&copy; 2024 Eaton Business School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
